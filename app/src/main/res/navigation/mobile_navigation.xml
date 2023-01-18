@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_tasks">
+
+    <fragment
+        android:id="@+id/navigation_tasks"
+        android:name="com.example.injaaz.ui.tasks.TasksFragment"
+        android:label="@string/title_tasks"
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_navigation_tasks_to_newTaskFragment"
+            app:destination="@id/newTaskFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_schedule"
+        android:name="com.example.injaaz.ui.schedule.ScheduleFragment"
+        android:label="@string/title_schedule"
+        tools:layout="@layout/fragment_schedule" />
+
+    <fragment
+        android:id="@+id/navigation_me"
+        android:name="com.example.injaaz.ui.user.UserFragment"
+        android:label="@string/title_me"
+        tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/newTaskFragment"
+        android:name="com.example.injaaz.ui.tasks.NewTaskFragment"
+        android:label="fragment_new_task"
+        tools:layout="@layout/fragment_new_task" >
+        <action
+            android:id="@+id/action_newTaskFragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks"
+            app:popUpTo="@id/navigation_tasks"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
