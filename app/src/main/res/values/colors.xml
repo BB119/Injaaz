@@ -10,5 +10,6 @@
     <color name="orange_200">#FDCDC4</color>
     <color name="orange_500">#FF725E</color>
     <color name="orange_700">#e74b3c</color>
-    <color name="light_gray">#cccccc</color>
+    <color name="dark_gray">#666666</color>
+    <color name="light_gray">#eeeeee</color>
 </resources>

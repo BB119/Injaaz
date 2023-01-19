@@ -15,7 +15,19 @@ class TasksViewModel : ViewModel() {
         _taskList.value = DataSource.tasks
     }
 
-    fun addNewTask(task: Task) {
-        _taskList.value?.add(task)
+    fun addNewTask(task: Task, position: Int = -1) {
+        if (position != -1) {
+            _taskList.value?.add(position, task)
+        } else {
+            _taskList.value?.add(task)
+        }
+    }
+
+    fun getTaskAtPosition(position: Int): Task? {
+        return _taskList.value?.get(position)
+    }
+
+    fun deleteTaskAtPosition(position: Int) {
+        _taskList.value?.removeAt(position)
     }
 }
