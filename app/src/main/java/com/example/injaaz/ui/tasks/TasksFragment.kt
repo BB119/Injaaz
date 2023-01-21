@@ -46,11 +46,6 @@ class TasksFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupRecyclerView(binding)
-
-        binding.newTaskFab.setOnClickListener {
-            findNavController().navigate(R.id.action_navigation_tasks_to_newTaskFragment)
-        }
-
     }
 
     private fun setupRecyclerView(tasksBinding: FragmentTasksBinding) {

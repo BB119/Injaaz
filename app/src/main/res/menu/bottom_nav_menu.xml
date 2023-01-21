@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/navigation_tasks"
         android:icon="@drawable/ic_task"
+        app:showAsAction="ifRoom"
         android:title="@string/title_tasks" />
 
     <item
         android:id="@+id/navigation_schedule"
         android:icon="@drawable/ic_calendar"
+        app:showAsAction="ifRoom"
         android:title="@string/title_schedule" />
 
     <item
         android:id="@+id/navigation_me"
+        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_person"
         android:title="@string/title_me" />
+
+    <item
+        android:id="@+id/placeholder"
+        android:title="" />
 
 </menu>
